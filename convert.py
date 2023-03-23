@@ -1,4 +1,5 @@
 import csv
+import re
 field = ['time','vx','vy','vz']
 string = []
 time = []
@@ -8,6 +9,7 @@ vz = []
 with open("Dwarka_16_DVL .json","r") as fp:
   string.append(fp.read())
 string = string[0]
+print(string[1123])
 r=string.split(",")
 for reg in r:
   if '{"time":' in reg :
